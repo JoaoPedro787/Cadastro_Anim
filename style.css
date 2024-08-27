@@ -23,19 +23,20 @@ body {
 
 /* Variáveis CSS */
 :root {
-    --PrimaryColor: #61a095;
+    --PrimaryColor: #58af9d;
     --InputColor: #ebeff1;
 }
 
 /* Container principal */
 .container {
     display: flex;
-    width: 50vw;
-    height: 50vh;
+    width: 1000px;
+    height: 500px;
     border-radius: 1em;
     overflow: hidden;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.12);
     animation: appear 0.4s forwards ease-out;
+    position: relative;
 }
 
 /* Conteúdo principal */
@@ -56,6 +57,10 @@ body {
     background-color: var(--PrimaryColor);
     flex: 1;
     gap: 0.5em;
+}
+
+.first_Content,.second_Content{
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.355, 1.35);
 }
 
 /* Textos */
@@ -170,17 +175,18 @@ button {
 .btnSecondContent:hover{
     color: var(--PrimaryColor);
     border: none;
+    margin-top: 1.5em;
     background-color: #FFF;
 }
 
 button:hover {
-    margin-top: 1.5em;
     cursor: pointer;
-    scale: 1.2;
+    scale: 1.3;
     transform: translateY(-1em);
     opacity: 0.8;
 }
 
+/* Animações */
 @keyframes appear {
     from{
         opacity: 0;
